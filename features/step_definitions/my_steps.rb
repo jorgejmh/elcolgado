@@ -1,5 +1,5 @@
 Given(/^que abri el juego$/) do
-	visit '/captura'
+	visit '/'
 end
 
 Given(/^ingreso la letra "([^"]*)"$/) do |letra|
@@ -13,7 +13,7 @@ Then(/^debo ver "([^"]*)"$/) do |letra|
 end
 
 Given(/^que abri el indice$/) do
-  visit '/captura'
+  visit '/'
 end
 
 Then(/^debo ver oculto "([^"]*)"$/) do |texto|

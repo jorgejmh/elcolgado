@@ -1,9 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
 </head>
 <body>
-<%= session['palabraoculta'] %>
+	<h1>Bienvenido a el colgado</h1>
+	<h2><%= session['colg'].palabraOcultada.join() %></h2>
+	<br>
+	<br>
+	<form action="/" method="POST">
+		<input type="text" name="letra" maxlength="1">
+		<input type="submit" value="Guardar" >			
+	</form>
+	<h1><%= session['msg'] %></h1>	
 </body>
 </html>

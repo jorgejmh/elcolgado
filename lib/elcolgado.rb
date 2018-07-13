@@ -24,7 +24,7 @@ class ElColgado
 
 	def adivinaPalabra letra
 			@palabraOculta.split('').each do |caracter|
-				if caracter == letra
+				if caracter.upcase == letra.upcase
 					posicion=@palabraOculta.index(caracter)
 					@palabraOcultada[posicion] = letra
 				end
@@ -36,7 +36,6 @@ class ElColgado
 	def getNumeroIntentos
 		return @intentos
 	end
-
 
 	def ocultarPalabra(palabra)
 		palabraOcultada = ""

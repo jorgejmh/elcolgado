@@ -4,14 +4,13 @@
 </head>
 <body>
 	<h1>Bienvenido a el colgado</h1>
-	<h2><%= session['palabraoculta'] %></h2>
+	<h2><%= session['colg'].palabraOcultada.join() %></h2>
 	<br>
 	<br>
-	<form action="/captura" method="POST">
+	<form action="/" method="POST">
 		<input type="text" name="letra" maxlength="1">
 		<input type="submit" value="Guardar" >			
 	</form>
-	<h1><%= session['msg'] %></h1>
-	<h3><%= session['usados'] %></h3>
+	<h1><%= session['msg'] %></h1>	
 </body>
 </html>

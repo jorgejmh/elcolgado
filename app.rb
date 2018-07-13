@@ -2,7 +2,7 @@ require 'sinatra'
 require './config'
 require './lib/elcolgado.rb'
 
-get '/captura' do
+get '/' do
 	session['colg'] = ElColgado.new()
 	session['msg'] = ""
 	session['palabraoculta'] = session['colg'].palabraOcultada.join()
@@ -10,7 +10,7 @@ get '/captura' do
 	erb(:capturaletra) 	
  end	
 
-post '/captura' do
+post '/' do
 	#session['palabraoculta'] = session['colg'].ocultarPalabra("Hola")
 	session['palabraoculta'] = session['colg'].palabraOcultada.join()
 	session['msg'] = session['colg'].muestraCaracteresUsados ( params['letra'] )
