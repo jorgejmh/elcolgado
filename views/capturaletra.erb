@@ -8,9 +8,10 @@
 	<br>
 	<br>
 	<form action="/captura" method="POST">
-		<input type="text" name="letra">
-		<input type="submit" value="Guardar">			
+		<input type="text" name="letra" maxlength="1">
+		<input type="submit" value="Guardar" >			
 	</form>
 	<h1><%= session['msg'] %></h1>
+	<h3><%= session['usados'] %></h3>
 </body>
 </html>

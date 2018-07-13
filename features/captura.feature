@@ -13,3 +13,13 @@ Scenario: trato de adivinar una letra
 	And ingreso la letra "A"
 	And ingreso la letra "B"
 	Then debo ver "Caracteres usados: A,B"
+
+Scenario: trato de adivinar la palabra
+	Given que abri el juego
+	And ingreso la letra "A"
+	Then debo ver "___A"
+Scenario: trato de adivinar la palabra
+	Given que abri el juego
+	And ingreso la letra "A"
+	And ingreso la letra "H"
+	Then debo ver "H__A"
