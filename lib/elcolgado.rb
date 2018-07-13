@@ -6,9 +6,9 @@ class ElColgado
 		@list	= []
 		@intentos  = 0
 		#@palabras = ["Hola","Adios","Scrum","Agile","Desarrollador"]
-		@palabraOculta = "Hola"
-		@palabraOcultada = ocultarPalabra(@palabraOculta)
-
+		@palabraOculta = "HOLA"
+		@palabraOcultaArray = @palabraOculta.split("")
+		@palabraOcultada = Array.new(@palabraOcultaArray.size,"_")
 	end
 
 	def muestraCaracteresUsados letra
@@ -23,14 +23,14 @@ class ElColgado
 	end
 
 	def adivinaPalabra letra
-		if @palabraOculta.include?(letra)
-			posicion = @palabraOculta.index(letra)
-			@palabraOculta.each do |caracter|
-				posicion=@palabraOculta.index(caracter)
-				@palabraOcultada[posicion] = letra
+			@palabraOculta.split('').each do |caracter|
+				if caracter == letra
+					posicion=@palabraOculta.index(caracter)
+					@palabraOcultada[posicion] = letra
+				end
 			end
-		
-		end
+
+		return @palabraOcultada.join()
 	end 
 
 	def getNumeroIntentos
@@ -41,8 +41,8 @@ class ElColgado
 	def ocultarPalabra(palabra)
 		palabraOcultada = ""
 		palabra.split('').each do |variable|
-			palabraOcultada += "_ "
+			palabraOcultada += "_"
 		end
-	return palabraOcultada[0,palabraOcultada.size() - 1]
+	return palabraOcultada[0,palabraOcultada.size()]
 	end
 end
