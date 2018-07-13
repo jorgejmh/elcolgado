@@ -4,21 +4,30 @@ class ElColgado
 		@list	= []
 		@intentos  = 0
 		@palabras = ["Hola","Adios","Scrum","Agile","Desarrollador"]
+		@palabraOculta = "Hola"
 	end
 
 	def muestraCaracteresUsados letra
 
-		if !numero.nil? and numero.to_i.to_s.split('').uniq.size == 1
-			if(!@list.include? (letra) )
+		if !letra.nil? and letra.to_i.to_s == "0"
+			if(!@list.include? (letra))
 				@list.push letra
 			end
 			@intentos += 1
 		end
-
-		
-
 		return "Caracteres usados: #{@list.join(",")}"
 	end
+
+	def adivinaPalabra letra
+		if @palabraOculta.include?(letra)
+			posicion = @palabraOculta.index(letra)
+			@palabraOculta.each do |caracter|
+				posicion=@palabraOculta.index(caracter)
+				@palabraOcultada[posicion] = letra
+			end
+		
+		end
+	end 
 
 	def getNumeroIntentos
 		return @intentos
