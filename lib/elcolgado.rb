@@ -1,4 +1,5 @@
 class ElColgado
+
 	def initialize
 		@list	= []
 	end
