@@ -7,7 +7,7 @@ describe ElColgado do
 		expect(resultado).to eq "_ _ _"
 	end
 
-	it "debe de mostrar _ _ _" do
+	it "debe de mostrar Caracteres usados: A" do
 		ec = ElColgado.new
 		resultado = ec.muestraCaracteresUsados("A")
 		expect(resultado).to eq "Caracteres usados: A"

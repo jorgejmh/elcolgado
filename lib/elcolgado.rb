@@ -2,14 +2,27 @@ class ElColgado
 
 	def initialize
 		@list	= []
+		@intentos  = 0
 	end
 
 	def muestraCaracteresUsados letra
-		if(!@list.include? (letra) )
-			@list.push letra
+
+		if !numero.nil? and numero.to_i.to_s.split('').uniq.size == 1
+			if(!@list.include? (letra) )
+				@list.push letra
+			end
+			@intentos += 1
 		end
+
+		
+
 		return "Caracteres usados: #{@list.join(",")}"
 	end
+
+	def getNumeroIntentos
+		return @intentos
+	end
+
 
 	def ocultarPalabra(palabra)
 	palabraOculta = ""
