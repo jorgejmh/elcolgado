@@ -7,7 +7,8 @@ Given(/^ingreso la letra "([^"]*)"$/) do |letra|
 	click_button("Guardar")
 end
 
+
 Then(/^debo ver "([^"]*)"$/) do |letra|
- 	"Caracteres usados: A"
+	expect(page.body).to match /#{letra}/m
 end
 
