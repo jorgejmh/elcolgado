@@ -4,6 +4,7 @@ require './lib/elcolgado.rb'
 
 get '/captura' do
 	session['colg'] = ElColgado.new()
+	session['msg'] = ""
 	session['palabraoculta'] = session['colg'].ocultarPalabra(session['colg'].palabraOculta)
 	erb(:capturaletra) 	
  end	
