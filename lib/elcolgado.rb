@@ -1,7 +1,8 @@
 class ElColgado
 	attr_reader :palabraOculta
 	attr_reader :palabraOcultada
-	
+	attr_reader :intentos
+
 	def initialize
 		@list	= []
 		@intentos  = 0
