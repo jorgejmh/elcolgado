@@ -1,5 +1,9 @@
 class ElColgado
 	def ocultarPalabra(palabra)
-		palabraOculta = "_ _ _"		
+	palabraOculta = ""
+		palabra.split('').each do |variable|
+			palabraOculta += "_ "
+		end
+	return palabraOculta[0,palabraOculta.size() - 1]
 	end
 end
