@@ -1,3 +1,5 @@
 webrat.log
 coverage/
 *.orig
+.rspec
+spec/spec_helper.rb

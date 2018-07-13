@@ -1,6 +1,11 @@
 require 'sinatra'
 require './config'
 
-get '/' do
+get '/captura' do
+  erb(:capturaletra)
+end
 
+post '/captura' do
+  "Caracteres usados: A"
+  erb(:capturaletra)
 end
