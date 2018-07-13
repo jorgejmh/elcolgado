@@ -13,7 +13,7 @@ Then(/^debo ver "([^"]*)"$/) do |letra|
 end
 
 Given(/^que abri el indice$/) do
-  visit '/'
+  visit '/captura'
 end
 
 Then(/^debo ver oculto "([^"]*)"$/) do |texto|

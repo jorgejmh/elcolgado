@@ -9,4 +9,4 @@ Scenario: debe existir una palabra oculta con _
 
 Scenario: dado la palabra hola debe existir la palabra oculta con _
 	Given que abri el indice
-	Then debo ver oculto "_ _ _ _" 
+	Then debo ver oculto "_ _ _ _"

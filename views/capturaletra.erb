@@ -4,6 +4,9 @@
 </head>
 <body>
 	<h1>Bienvenido a el colgado</h1>
+	<h2><%= session['palabraoculta'] %></h2>
+	<br>
+	<br>
 	<form action="/captura" method="POST">
 		<input type="text" name="letra">
 		<input type="submit" value="Guardar">			
