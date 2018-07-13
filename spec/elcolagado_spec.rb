@@ -13,10 +13,10 @@ describe ElColgado do
 		expect(resultado).to eq "Caracteres usados: A"
 	end
 
-	it "debe de mostrar ___A" do
+	it "debe de mostrar nada" do
 		ec = ElColgado.new
 		resultado = ec.adivinaPalabra 'A'
-		expect(resultado).to eq "___A"
+		expect(resultado).to eq ""
 	end
 
 	it "debe de mostrar Perdiste" do

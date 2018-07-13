@@ -36,17 +36,14 @@ class ElColgado
 				@intentos -= 1
 			end
 
-			if @palabraOculta == @palabraOcultada.join()
+			if @palabraOculta.upcase== @palabraOcultada.join().upcase
 				return "Ganaste!!!!"
 			end
 
 			if @intentos <= 0
 				return "Perdiste"
 			end
-
-
-
-		return @palabraOcultada.join()
+		return ""
 	end
 
 	def ocultarPalabra(palabra)

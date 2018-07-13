@@ -17,9 +17,11 @@ Scenario: trato de adivinar una letra
 Scenario: trato de adivinar la palabra
 	Given que abri el juego
 	And ingreso la letra "A"
-	Then debo ver "___A"
+	Then debo ver ""
+
 Scenario: trato de adivinar la palabra
 	Given que abri el juego
 	And ingreso la letra "A"
 	And ingreso la letra "H"
 	Then debo ver "H__A"
+

@@ -5,8 +5,8 @@ require './lib/elcolgado.rb'
 get '/' do
 	session['colg'] = ElColgado.new()
 	session['msg'] = ""
-	session['intentos'] = 0
 	session['palabraoculta'] = session['colg'].palabraOcultada.join()
+	session['intentos'] = session['colg'].intentos
 	#session['colg'].ocultarPalabra(session['colg'].palabraOculta)
 	erb(:capturaletra) 	
  end	

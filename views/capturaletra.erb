@@ -7,7 +7,7 @@
 	<h1>Bienvenido a el colgado</h1>
 	<br>
 	<br>
-	<h1><%= session['colg'].palabraOcultada.join(' ') %></h1>
+	<h1><%= session['colg'].palabraOcultada.join('') %></h1>
 	<br>
 	<br>
 	<form action="/" method="POST">
@@ -17,7 +17,8 @@
 	<h3><%= session['msg'] %></h3>	
 	</div>
 	<div align="center">
-	<h3><%= session['intentos'] %></h3>		
+	<h3><%= session['intentos'] %></h3>
+	<h1><%= session['usados'] %></h1>	
 	</div>	
 </body>
 </html>
