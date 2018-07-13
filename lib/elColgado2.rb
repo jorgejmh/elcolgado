@@ -1,9 +1,7 @@
-class elColgado
-	def initialize
-		end
+class ElColgado2
 
-	def es_valido? numero
-		return "#{input} #{@Fijos}F #{@Picas}P"
+	def muestraCaracteresUsados
+		return "Caracteres usados: A"
 	end
 
 end
