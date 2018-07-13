@@ -1,10 +1,13 @@
 Given(/^que abri el juego$/) do
-  visit '/' #abre el home
+	visit '/captura'
 end
 
-Then(/^debo ver "([^"]*)"$/) do |texto|
-  expect(page.body).to match /#{texto}/m
+Given(/^ingreso la letra "([^"]*)"$/) do |letra|
+	fill_in("letra", :with => letra)
+	click_button("Guardar")
 end
 
-
+Then(/^debo ver "([^"]*)"$/) do |letra|
+ 	"Caracteres usados: A"
+end
 

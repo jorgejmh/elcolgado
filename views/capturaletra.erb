@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+	<h1>Bienvenido a el colgado</h1>
+	<form action="/captura" method="POST">
+		<input type="text" name="letra">
+		<input type="submit" value="Guardar">			
+	</form>
+	<h1><%= session['msg'] %></h1>
+</body>
+</html>
