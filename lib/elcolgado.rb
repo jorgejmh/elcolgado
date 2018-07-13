@@ -2,7 +2,7 @@ class ElColgado
 
 	def initialize
 		@list	= []
-		@palabras = ["Hola"]
+		@palabras = ["Hola","Adios","Scrum","Agile","Desarrollador"]
 	end
 
 	def muestraCaracteresUsados letra
