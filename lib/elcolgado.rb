@@ -1,4 +1,15 @@
 class ElColgado
+	def initialize
+		@list	= []
+	end
+
+	def muestraCaracteresUsados letra
+		if(!@list.include? (letra) )
+			@list.push letra
+		end
+		return "Caracteres usados: #{@list.join(",")}"
+	end
+
 	def ocultarPalabra(palabra)
 	palabraOculta = ""
 		palabra.split('').each do |variable|
