@@ -1,10 +1,14 @@
 class ElColgado
-
+	attr_reader :palabraOculta
+	attr_reader :palabraOcultada
+	
 	def initialize
 		@list	= []
 		@intentos  = 0
-		@palabras = ["Hola","Adios","Scrum","Agile","Desarrollador"]
+		#@palabras = ["Hola","Adios","Scrum","Agile","Desarrollador"]
 		@palabraOculta = "Hola"
+		@palabraOcultada = ocultarPalabra(@palabraOculta)
+
 	end
 
 	def muestraCaracteresUsados letra
@@ -35,10 +39,10 @@ class ElColgado
 
 
 	def ocultarPalabra(palabra)
-	palabraOculta = ""
+		palabraOcultada = ""
 		palabra.split('').each do |variable|
-			palabraOculta += "_ "
+			palabraOcultada += "_ "
 		end
-	return palabraOculta[0,palabraOculta.size() - 1]
+	return palabraOcultada[0,palabraOcultada.size() - 1]
 	end
 end
