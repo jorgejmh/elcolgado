@@ -7,6 +7,7 @@ get '/' do
 	session['msg'] = ""
 	session['palabraoculta'] = session['colg'].palabraOcultada.join()
 	session['intentos'] = session['colg'].intentos
+	session['usados'] = ""
 	#session['colg'].ocultarPalabra(session['colg'].palabraOculta)
 	erb(:capturaletra) 	
  end	
