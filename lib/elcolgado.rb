@@ -2,6 +2,7 @@ class ElColgado
 
 	def initialize
 		@list	= []
+		@palabras = ["Hola"]
 	end
 
 	def muestraCaracteresUsados letra
