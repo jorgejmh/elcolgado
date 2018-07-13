@@ -1,11 +1,12 @@
 require 'sinatra'
 require './config'
 require './lib/elColgado2.rb'
+require './lib/elcolgado.rb'
 
 get '/' do
-	"hola".split("").each do |c|
- 		puts "_ "
- 	end 
+	el = ElColgado.new
+	session['palabraoculta'] = el.ocultarPalabra("Hola")
+	erb(:index) 	
  end	
 
 get '/captura' do

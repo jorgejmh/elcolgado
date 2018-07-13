@@ -11,3 +11,11 @@ Then(/^debo ver "([^"]*)"$/) do |letra|
  	"Caracteres usados: A"
 end
 
+Given(/^que abri el indice$/) do
+  visit '/'
+end
+
+Then(/^debo ver oculto "([^"]*)"$/) do |texto|
+  expect(page.body).to match /#{texto}/m
+end
+

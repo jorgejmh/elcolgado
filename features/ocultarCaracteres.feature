@@ -4,9 +4,9 @@ Feature:
 	para intentar adivinar la palabra
 
 Scenario: debe existir una palabra oculta con _
-	Given que abri el juego
-	Then debo ver "_" 
+	Given que abri el indice
+	Then debo ver oculto "_" 
 
 Scenario: dado la palabra hola debe existir la palabra oculta con _
-	Given que abri el juego	
-	Then debo ver "_ _ _ _" 
+	Given que abri el indice
+	Then debo ver oculto "_ _ _ _" 
